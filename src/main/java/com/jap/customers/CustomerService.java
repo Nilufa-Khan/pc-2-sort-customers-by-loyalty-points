@@ -8,6 +8,10 @@ public class CustomerService {
 public List<Integer> getListOfCustomersSortedByLoyaltyPoints(List<Customer> customerList, LoyaltyPointComparator loyaltyPointComparator){
 List<Integer> integerList = new ArrayList<>();
     Collections.sort(customerList,new LoyaltyPointComparator());
+    for(Customer cus : customerList){
+        integerList.add(cus.getLoyaltyPoints());
+    }
+    return integerList;
 
 }
 
