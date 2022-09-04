@@ -1,7 +1,13 @@
 package com.jap.customers;
 
 
-// Implement the Comparator interface
-public class LoyaltyPointComparator {
+import java.util.Comparator;
 
+// Implement the Comparator interface
+public class LoyaltyPointComparator implements Comparator<Customer> {
+
+    @Override
+    public int compare(Customer o1, Customer o2) {
+        return 0;
+    }
 }
