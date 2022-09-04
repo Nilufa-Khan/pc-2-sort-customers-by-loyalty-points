@@ -1,6 +1,8 @@
 package com.jap.customers;
 
-public class Customer{
+import java.util.Comparator;
+
+public class Customer implements Comparator<Customer> {
 private int customerId;
 private String customerName;
 private String customerGender;
@@ -77,5 +79,10 @@ private int loyaltyPoints;
                 ", city='" + city + '\'' +
                 ", loyaltyPoints=" + loyaltyPoints +
                 '}';
+    }
+
+    @Override
+    public int compare(Customer o1, Customer o2) {
+        return 0;
     }
 }
